@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "prettier --check .",
-    "cypress": "cypress open"
+    "cypress": "cypress run"
   },
   "dependencies": {
     "next": "^11.0.0",
