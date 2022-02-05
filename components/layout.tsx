@@ -1,9 +1,9 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import Navbar from "./navbar";
+import MyImage from "/public/images/profile144.jpg";
 
 const name = "Misael Aguayo";
 export const siteTitle = "My Blog";
@@ -28,13 +28,10 @@ export default function Layout({ children, home }) {
         <header className={styles.header}>
           {home ? (
             <>
-              <Image
-                priority
-                src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
-                height={144}
-                width={144}
+              <img
+                src={MyImage.src}
                 alt={name}
+                className={utilStyles.borderCircle}
               />
               <h1 className={utilStyles.heading2Xl}>{name}</h1>
             </>
@@ -42,13 +39,10 @@ export default function Layout({ children, home }) {
             <>
               <Link href="/">
                 <a>
-                  <Image
-                    priority
-                    src="/images/profile.jpg"
-                    className={utilStyles.borderCircle}
-                    height={108}
-                    width={108}
+                  <img
+                    src={MyImage.src}
                     alt={name}
+                    className={utilStyles.borderCircle}
                   />
                 </a>
               </Link>
