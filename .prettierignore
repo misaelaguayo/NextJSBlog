@@ -1,2 +1,3 @@
 .next/**
 /cypress/**
+tsconfig.json
