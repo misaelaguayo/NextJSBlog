@@ -1,24 +1,23 @@
 import styles from "./navbar.module.css";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
     <div className={styles.nav}>
       <ul>
-        <a href="/Resume.docx" download>
-          RESUME
-        </a>
+        <Link href="/Resume.docx">RESUME</Link>
       </ul>
       <ul>
-        <a href="/posts/first-post">WRITEUPS</a>
+        <Link href="/posts/first-post">WRITEUPS</Link>
       </ul>
       <ul>
-        <a href="https://github.com/misaelaguayo">GITHUB</a>
+        <Link href="https://github.com/misaelaguayo">GITHUB</Link>
       </ul>
       <ul>
-        <a href="https://tryhackme.com/p/irishyogashirt">TRYHACKME</a>
+        <Link href="https://tryhackme.com/p/irishyogashirt">TRYHACKME</Link>
       </ul>
       <ul>
-        <a href="/posts/certifications">CERTIFICATIONS</a>
+        <Link href="/posts/certifications">CERTIFICATIONS</Link>
       </ul>
     </div>
   );
