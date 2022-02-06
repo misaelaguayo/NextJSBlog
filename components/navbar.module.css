@@ -12,3 +12,8 @@
   flex-direction: column;
   align-items: left;
 }
+
+.hamburger {
+  color: #c2c4c7;
+  align-self: right;
+}

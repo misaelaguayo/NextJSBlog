@@ -1,9 +1,16 @@
 import styles from "./navbar.module.css";
 import Link from "next/link";
+import { IconContext } from "react-icons";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
   return (
     <div className={styles.nav}>
+      <IconContext.Provider
+        value={{ color: "#c2c4c7", className: styles.hamburger }}
+      >
+        <GiHamburgerMenu />
+      </IconContext.Provider>
       <ul>
         <Link href="/Resume.docx">RESUME</Link>
       </ul>
