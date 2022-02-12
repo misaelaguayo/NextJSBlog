@@ -1,5 +1,4 @@
 .next/**
-/cypress/**
 /out/**
 tsconfig.json
 .github/workflows/deploy.yml
