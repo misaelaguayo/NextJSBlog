@@ -1,16 +1,21 @@
 .nav {
   height: 100%;
   width: 15%;
-  position: fixed;
   z-index: 1;
   top: 0;
   background-color: #232323;
   transition: 0.5s ease;
   overflow-x: hidden;
-  padding-top: 20px;
+  padding: 1.5rem 1rem 1rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.navhidden {
+  transition: 0.5s ease;
+  width: 10%;
+  overflow-x: hidden;
 }
 
 .hamburger {
