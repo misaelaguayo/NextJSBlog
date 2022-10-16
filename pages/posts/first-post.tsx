@@ -10,7 +10,7 @@ export default function FirstPost() {
     const response = await fetch("/markdown/hackpark.md");
     const text = await response.text();
     setMarkdown(text);
-  });
+  }, []);
 
   return (
     <div className={markdownStyles.markdownContainer}>
