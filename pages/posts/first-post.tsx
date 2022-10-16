@@ -17,7 +17,9 @@ export default function FirstPost() {
 
   return (
     <div className={markdownStyles.markdownContainer}>
-      <ReactMarkdown children={markdown} className={markdownStyles.markdown} />
+      <ReactMarkdown className={markdownStyles.markdown}>
+        {markdown}
+      </ReactMarkdown>
     </div>
   );
 }
