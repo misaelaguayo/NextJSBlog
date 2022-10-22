@@ -28,6 +28,9 @@ const Navbar = () => {
             <Link href="/posts/first-post">WRITEUPS</Link>
           </ul>
           <ul>
+            <Link href="/projects">PROJECTS</Link>
+          </ul>
+          <ul>
             <Link href="https://github.com/misaelaguayo">GITHUB</Link>
           </ul>
           <ul>
