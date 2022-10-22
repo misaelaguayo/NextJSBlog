@@ -13,8 +13,11 @@
 }
 
 .navhidden {
+  padding-top: 1.5rem;
+  background-color: #232323;
+  padding-left: 0.5rem;
   transition: 0.5s ease;
-  width: 10%;
+  width: 2%;
   overflow-x: hidden;
 }
 
