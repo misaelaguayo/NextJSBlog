@@ -11,7 +11,12 @@ export function Repl() {
   const [output, setOutput] = useState("");
   function handleCommand(command: string) {
     if (pyodideInstance) {
-      setOutput(pyodideInstance.runPython(command));
+      try {
+        setOutput(pyodideInstance.runPython(command));
+      } catch (e) {
+        console.log(e);
+        setOutput("Some kinda python error");
+      }
     }
   }
   useEffect(() => {
@@ -41,7 +46,7 @@ export function Repl() {
           />
         </label>
         <input
-          type="submit"
+          type="button"
           onClick={() => {
             handleCommand(command);
           }}
