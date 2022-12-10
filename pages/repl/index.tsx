@@ -30,7 +30,7 @@ export function Repl() {
           indexURL: "https://cdn.jsdelivr.net/pyodide/v0.20.0/full/",
         });
         await pyodide.loadPackage(
-          "https://test-files.pythonhosted.org/packages/7a/22/a138c87326344bf240275943f9c681003549aeec42e4c3efcd72aea25a11/brd_package_misaelaguayo-0.0.3-py3-none-any.whl"
+          "https://test-files.pythonhosted.org/packages/24/79/3e5750eb5115656d93f0e1f9ab6f8697432cbd0451c634628d896dfd4e69/brd_package_misaelaguayo-0.0.4-py3-none-any.whl"
         );
         setPyodideInstance(pyodide);
       }
