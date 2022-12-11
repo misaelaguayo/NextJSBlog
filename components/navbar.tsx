@@ -39,6 +39,9 @@ const Navbar = () => {
           <ul>
             <Link href="/posts/certifications">CERTIFICATIONS</Link>
           </ul>
+          <ul>
+            <Link href="/repl">REPL</Link>
+          </ul>
         </>
       )}
     </div>
