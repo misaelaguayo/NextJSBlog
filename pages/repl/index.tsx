@@ -8,7 +8,6 @@ export default function repl() {
 export function Repl() {
   const [pyodideInstance, setPyodideInstance] = useState(undefined);
   const [command, setCommand] = useState("");
-  // const [output, setOutput] = useState("blank");
   const output = useRef<HTMLParagraphElement>(null);
 
   const setOutput = (text: string) => {
@@ -23,7 +22,7 @@ export function Repl() {
     if (pyodideInstance) {
       try {
         pyodideInstance.runPython(
-          `from brd_package_misaelaguayo import Brd; Brd.run('${command}')`
+          `from brd_package_misaelaguayo import Brd; Brd.run('${output.current.textContent}')`
         );
       } catch (e) {
         console.log(e);
@@ -53,11 +52,7 @@ export function Repl() {
           rows={4}
           cols={50}
           name="name"
-          value={
-            command
-              ? command
-              : "{var i = 0; while (i < 10){print i;i = i + 1;}}"
-          }
+          value={command}
           onChange={(event) => {
             setCommand(event.target.value);
           }}
