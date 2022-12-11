@@ -1,4 +1,4 @@
 interface Window {
-  loadPyodide: ({ indexURL: str }) => Promise<any>;
+  loadPyodide: ({ indexURL: str, stdout }) => Promise<any>;
   loadPackage: (str) => Promise<any>;
 }

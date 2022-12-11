@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import replStyles from "../../styles/repl.module.css";
 
 export default function repl() {
@@ -8,18 +8,24 @@ export default function repl() {
 export function Repl() {
   const [pyodideInstance, setPyodideInstance] = useState(undefined);
   const [command, setCommand] = useState("");
-  const [output, setOutput] = useState("");
+  const output = useRef<HTMLParagraphElement>(null);
+
+  const setOutput = (text: string) => {
+    output.current.innerText += text + "\n";
+  };
+
+  function clearCommand() {
+    output.current.innerText = "";
+  }
+
   function handleCommand(command: string) {
     if (pyodideInstance) {
       try {
-        setOutput(
-          pyodideInstance.runPython(
-            `from brd_package_misaelaguayo import Brd; Brd.run('${command}')`
-          )
+        pyodideInstance.runPython(
+          `from brd_package_misaelaguayo import Brd; Brd.run('${output.current.textContent}')`
         );
       } catch (e) {
         console.log(e);
-        setOutput("Some kinda python error");
       }
     }
   }
@@ -28,6 +34,7 @@ export function Repl() {
       if (window.loadPyodide) {
         let pyodide = await window.loadPyodide({
           indexURL: "https://cdn.jsdelivr.net/pyodide/v0.20.0/full/",
+          stdout: setOutput,
         });
         await pyodide.loadPackage(
           "https://test-files.pythonhosted.org/packages/24/79/3e5750eb5115656d93f0e1f9ab6f8697432cbd0451c634628d896dfd4e69/brd_package_misaelaguayo-0.0.4-py3-none-any.whl"
@@ -51,15 +58,24 @@ export function Repl() {
           }}
         />
         <br />
-        <input
-          type="button"
-          onClick={() => {
-            handleCommand(command);
-          }}
-          value="Submit"
-        />
+        <div>
+          <input
+            type="button"
+            onClick={() => {
+              handleCommand(command);
+            }}
+            value="Submit"
+          />
+          <input
+            type="button"
+            onClick={() => {
+              clearCommand();
+            }}
+            value="Clear"
+          />
+        </div>
       </form>
-      <p>{output}</p>
+      <p ref={output}></p>
     </section>
   );
 }
