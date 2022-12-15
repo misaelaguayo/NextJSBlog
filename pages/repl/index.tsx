@@ -50,7 +50,7 @@ export function Repl() {
       <h2>REPL</h2>
       <form>
         <textarea
-          rows={4}
+          rows={5}
           cols={50}
           name="name"
           value={
