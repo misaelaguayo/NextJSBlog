@@ -45,7 +45,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          pwd; ls; hugo
+          hugo --config hugo.toml
       - name: Upload artifact
         uses: aws-actions/configure-aws-credentials@v1
         with:
