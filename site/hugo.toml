@@ -1,4 +1,4 @@
-baseURL = 'http://misaelaguayo.com/'
+# baseURL = 'http://misaelaguayo.com/'
 languageCode = 'en-us'
 title = 'My personal website'
 theme = 'risotto'
