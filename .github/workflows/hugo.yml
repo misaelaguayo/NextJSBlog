@@ -1,5 +1,5 @@
 # Sample workflow for building and deploying a Hugo site to GitHub Pages
-name: Deploy Hugo site to Pages
+name: Deploy Hugo
 
 on:
   # Runs on pushes targeting the default branch
@@ -20,6 +20,7 @@ concurrency:
 defaults:
   run:
     shell: bash
+    working-directory: ./site
 
 jobs:
   # Build job
@@ -44,7 +45,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          cd site && hugo
+          hugo
       - name: Upload artifact
         uses: aws-actions/configure-aws-credentials@v1
         with:
