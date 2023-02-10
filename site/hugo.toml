@@ -39,13 +39,13 @@ url = "mailto:aguayo.misael@gmail.com"
   [[menu.main]]
     identifier = "about"
     name = "About"
-    url = "/about/"
+    url = "/about/index.html"
     weight = 10
 
   [[menu.main]]
     identifier = "projects"
     name = "Projects"
-    url = "/projects/"
+    url = "/projects/index.html"
     weight = 10
 
 [taxonomies]
