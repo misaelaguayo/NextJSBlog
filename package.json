@@ -38,5 +38,6 @@
   "browser": {
     "fs": false,
     "readFile": false
-  }
+  },
+  "packageManager": "yarn@4.0.2"
 }
