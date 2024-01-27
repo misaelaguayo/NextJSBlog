@@ -7,7 +7,7 @@
     "build": "next build && next export",
     "start": "next start",
     "lint": "prettier --check .",
-    "lint-dangerous": "prettier --write .",
+    "format": "prettier --write .",
     "cypress": "cypress run"
   },
   "dependencies": {

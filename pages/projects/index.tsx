@@ -23,7 +23,11 @@ export default function projects() {
               position="top"
             />
             <MDBCardBody>
-              <MDBCardTitle>Rust Packet Visualization</MDBCardTitle>
+              <MDBCardTitle>
+                <a href="https://github.com/misaelaguayo/Rust-packet-visualizer">
+                  Rust Packet Visualization
+                </a>
+              </MDBCardTitle>
               <MDBCardText>
                 A packet for visualizing network requests
               </MDBCardText>
@@ -31,18 +35,9 @@ export default function projects() {
           </MDBCard>
         </div>
         <div className={styles.card}>
-          <MDBCard>
-            <MDBCardImage
-              src="https://user-images.githubusercontent.com/29875928/189706365-64882191-53b9-469e-a7d3-7709c2f60df0.gif"
-              position="top"
-            />
-            <MDBCardBody>
-              <MDBCardTitle>Rust Packet Visualization</MDBCardTitle>
-              <MDBCardText>
-                A packet for visualizing network requests
-              </MDBCardText>
-            </MDBCardBody>
-          </MDBCard>
+          <a href="https://github.com/misaelaguayo/markdown-preview-haskell">
+            Preview markdown in terminal
+          </a>
         </div>
       </div>
     </>
