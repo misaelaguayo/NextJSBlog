@@ -5,11 +5,12 @@ import {
   MDBCardText,
   MDBCardImage,
 } from "mdb-react-ui-kit";
+import Layout from "../../components/layout";
 
 import styles from "./projects.module.css";
 export default function projects() {
   return (
-    <>
+    <Layout>
       <h1 style={{ textAlign: "center" }}>Projects</h1>
       <div className={styles.projects}>
         <div className={styles.card}>
@@ -40,6 +41,6 @@ export default function projects() {
           </a>
         </div>
       </div>
-    </>
+    </Layout>
   );
 }

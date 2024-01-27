@@ -21,7 +21,6 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <div className={utilStyles.navBarDiv}>
-        <Navbar />
         <Layout home>
           <section className={utilStyles.headingMd}>
             <p>
