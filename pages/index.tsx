@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Navbar from "../components/navbar";
 import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import { useEffect } from "react";
@@ -31,9 +30,6 @@ export default function Home() {
             <p>
               This blog will be used to document some of the CTFs I participate
               and some of my interests.{" "}
-              <a href="https://www.linkedin.com/in/misael-aguayo-58b22985">
-                LinkedIn
-              </a>
             </p>
           </section>
         </Layout>

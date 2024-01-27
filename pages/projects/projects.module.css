@@ -1,9 +1,7 @@
 .projects {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding: 1rem;
 }
 
 .card {

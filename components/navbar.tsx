@@ -12,7 +12,7 @@ const Navbar = () => {
       className={expanded ? styles.nav : styles.navhidden}
       onClick={() => setExpanded(!expanded)}
     >
-      <div style={{ alignSelf: expanded ? "flex-end" : "flex-start" }}>
+      <div style={{ alignSelf: expanded && "flex-end" }}>
         <IconContext.Provider
           value={{ color: "#c2c4c7", className: styles.hamburger }}
         >
