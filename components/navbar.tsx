@@ -7,11 +7,8 @@ const Navbar = () => {
   const [expanded, setExpanded] = useState(true);
 
   return (
-    <div
-      className={expanded ? styles.nav : styles.navhidden}
-      onClick={() => setExpanded(!expanded)}
-    >
-      <div className={styles.bar}>
+    <div className={expanded ? styles.nav : styles.navhidden}>
+      <div className={styles.bar} onClick={() => setExpanded(!expanded)}>
         <Bar height={24} width={24} />
       </div>
       {expanded && (

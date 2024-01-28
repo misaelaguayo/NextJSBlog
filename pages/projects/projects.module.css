@@ -1,12 +1,22 @@
 .projects {
   display: flex;
-  flex-direction: column;
-  padding: 1rem;
+  flex-wrap: wrap;
+  padding: 3rem;
+  gap: 3rem;
 }
 
 .card {
-  border-radius: "25px";
-  background-color: "blue";
+  background-color: #665c54;
+  width: 25%;
+  border-radius: 5%;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.card h3 {
+  color: #fbf1c7;
+  text-align: center;
+  font-size: 1rem;
 }
 
 .projects img {

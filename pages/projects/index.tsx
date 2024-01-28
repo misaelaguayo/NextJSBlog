@@ -1,10 +1,3 @@
-import {
-  MDBCard,
-  MDBCardBody,
-  MDBCardTitle,
-  MDBCardText,
-  MDBCardImage,
-} from "mdb-react-ui-kit";
 import Layout from "../../components/layout";
 
 import styles from "./projects.module.css";
@@ -14,31 +7,43 @@ export default function projects() {
       <h1 style={{ textAlign: "center" }}>Projects</h1>
       <div className={styles.projects}>
         <div className={styles.card}>
-          <MDBCard>
-            <MDBCardImage
-              style={{
-                borderTopRightRadius: "25px",
-                borderTopLeftRadius: "25px",
-              }}
-              src="https://user-images.githubusercontent.com/29875928/189706365-64882191-53b9-469e-a7d3-7709c2f60df0.gif"
-              position="top"
-            />
-            <MDBCardBody>
-              <MDBCardTitle>
-                <a href="https://github.com/misaelaguayo/Rust-packet-visualizer">
-                  Rust Packet Visualization
-                </a>
-              </MDBCardTitle>
-              <MDBCardText>
-                A packet for visualizing network requests
-              </MDBCardText>
-            </MDBCardBody>
-          </MDBCard>
+          <h3>Rust packet visualizer</h3>
+          <p>
+            Visualize network packets in real time. Uses sdl2 library in rust
+            and displays nodes travelling from one host to another
+          </p>
         </div>
         <div className={styles.card}>
-          <a href="https://github.com/misaelaguayo/markdown-preview-haskell">
-            Preview markdown in terminal
-          </a>
+          <h3>Brd programming language</h3>
+          <p>
+            A dynamic toy language implemented in python used to learn more
+            about AST and token parsing
+          </p>
+        </div>
+        <div className={styles.card}>
+          <h3>Haskell markdown previewer</h3>
+          <p>
+            {" "}
+            A way to preview markdown files in a terminal supporting sixels or
+            the kitty graphics protocol. Currently working on creatting a neovim
+            plugin to support this
+          </p>
+        </div>
+        <div className={styles.card}>
+          <h3>PDF text to speech</h3>
+          <p>
+            {" "}
+            A way to convert pdf files to audio files using Java. Utilized
+            multithreading to process text while playing audio
+          </p>
+        </div>
+        <div className={styles.card}>
+          <h3>Personal blog</h3>
+          <p>
+            {" "}
+            The site you're viewing right now! Built using Next.js and React.
+            Automatically published to s3 on push to repo
+          </p>
         </div>
       </div>
     </Layout>

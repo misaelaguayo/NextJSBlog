@@ -1,8 +1,7 @@
-import Head from "next/head";
-import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import markdownStyles from "../../styles/markdown.module.css";
 import { useEffect, useState } from "react";
+import Layout from "../../components/layout";
 
 export default function FirstPost() {
   const [markdown, setMarkdown] = useState(null);
@@ -16,10 +15,10 @@ export default function FirstPost() {
   }, []);
 
   return (
-    <div className={markdownStyles.markdownContainer}>
+    <Layout>
       <ReactMarkdown className={markdownStyles.markdown}>
         {markdown}
       </ReactMarkdown>
-    </div>
+    </Layout>
   );
 }

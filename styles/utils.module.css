@@ -51,11 +51,3 @@
 .lightText {
   color: #666;
 }
-
-.navBarDiv {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: fixed;
-}
