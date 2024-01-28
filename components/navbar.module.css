@@ -9,11 +9,9 @@
 }
 
 .navhidden {
-  padding-top: 1.5rem;
+  padding: 1.5rem 0.5rem 1rem 0.5rem;
   background-color: #282828;
-  padding-left: 0.5rem;
   transition: 0.5s ease;
-  width: 2%;
 }
 
 .nav > *,
@@ -21,7 +19,8 @@
   background-color: #282828;
 }
 
-.hamburger {
+.bar {
+  align-self: flex-end;
 }
 
 @media all and (max-width: 400px) {
