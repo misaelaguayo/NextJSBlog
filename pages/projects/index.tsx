@@ -41,7 +41,7 @@ export default function projects() {
           <h3>Personal blog</h3>
           <p>
             {" "}
-            The site you're viewing right now! Built using Next.js and React.
+            The site you are viewing right now! Built using Next.js and React.
             Automatically published to s3 on push to repo
           </p>
         </div>
