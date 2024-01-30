@@ -4,6 +4,9 @@ import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import MyImage from "/public/images/profile144.jpg";
 import Navbar from "./navbar";
+import Github from "./Github";
+import LinkedIn from "./LinkedIn";
+import TryHackMe from "./TryHackMe";
 
 const name = "Misael Aguayo";
 export const siteTitle = "My Site";
@@ -19,6 +22,13 @@ export default function Layout({ children, home = false }) {
       </Head>
       <Navbar />
       <div className={styles.content}>
+        {!home && (
+          <div className={styles.backToHome}>
+            <Link href="/">
+              <a>← Back to home</a>
+            </Link>
+          </div>
+        )}
         <main>{children}</main>
         <header className={styles.header}>
           {home && (
@@ -28,6 +38,34 @@ export default function Layout({ children, home = false }) {
                 alt={name}
                 className={utilStyles.borderCircle}
               />
+              <div className={styles.social}>
+                <Github
+                  height="24"
+                  width="24"
+                  cursor="pointer"
+                  onClick={() =>
+                    (window.location.href = "https://github.com/misaelaguayo")
+                  }
+                />
+                <LinkedIn
+                  height="24"
+                  width="24"
+                  cursor="pointer"
+                  onClick={() =>
+                    (window.location.href =
+                      "https://www.linkedin.com/in/misael-aguayo-58b22985/")
+                  }
+                />
+                <TryHackMe
+                  height="24"
+                  width="24"
+                  cursor="pointer"
+                  onClick={() =>
+                    (window.location.href =
+                      "https://tryhackme.com/p/irishyogashirt")
+                  }
+                />
+              </div>
               <h1 className={utilStyles.heading2Xl}>{name}</h1>
             </>
           )}

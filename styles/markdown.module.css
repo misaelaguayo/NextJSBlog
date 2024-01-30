@@ -8,13 +8,12 @@
 }
 
 .markdown code {
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   margin: 0;
   font-size: 85%;
-  background-color: #f0f6fc26;
+  background-color: #282828;
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
@@ -22,9 +21,9 @@
 .markdown {
   padding-left: 4rem;
   padding-right: 4rem;
-  background-color: #0d1117;
+  background-color: #665c54;
   color: #c9d1d9;
-  max-width: 900px;
+  max-width: 75%;
   margin: 0 auto;
 }
 

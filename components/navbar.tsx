@@ -17,23 +17,18 @@ const Navbar = () => {
             <Link href="/Resume.docx">RESUME</Link>
           </ul>
           <ul>
-            <Link href="/posts/first-post">WRITEUPS</Link>
-          </ul>
-          <ul>
             <Link href="/projects">PROJECTS</Link>
           </ul>
           <ul>
-            <Link href="https://github.com/misaelaguayo">GITHUB</Link>
-          </ul>
-          <ul>
-            <Link href="https://tryhackme.com/p/irishyogashirt">TRYHACKME</Link>
+            <Link href="/posts/first-post">WRITEUPS</Link>
           </ul>
           <ul>
             <Link href="/posts/certifications">CERTIFICATIONS</Link>
           </ul>
+          {/* Hide this for now until I can get it working
           <ul>
             <Link href="/repl">REPL</Link>
-          </ul>
+          </ul> */}
         </>
       )}
     </div>

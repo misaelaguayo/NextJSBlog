@@ -2,7 +2,11 @@
   display: flex;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  overflow: scroll;
+}
+
+.container > div {
+  overflow: scroll;
 }
 
 .nav {
@@ -27,6 +31,15 @@
   align-items: center;
 }
 
+.socials {
+  display: flex;
+  justify-content: center;
+}
+
 .backToHome {
-  margin: 3rem 0 0;
+  padding-left: 1rem;
+}
+
+.backToHome a {
+  color: #282828;
 }
